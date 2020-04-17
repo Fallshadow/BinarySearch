@@ -29,7 +29,7 @@ namespace act
                     case game.SceneEnum.Entry:
                         break;
                     case game.SceneEnum.MainMenu:
-                        sceneFadeCanvas.fadeType = FadeType.FullBlackFade;
+                        sceneFadeCanvas.fadeType = FadeType.Berserk;
                         sceneFadeCanvas.FadeOut(
                             () =>
                             {
@@ -43,7 +43,7 @@ namespace act
                         );
                         break;
                     case game.SceneEnum.Study:
-                        sceneFadeCanvas.fadeType = FadeType.FullBlackFade;
+                        sceneFadeCanvas.fadeType = FadeType.Berserk;
                         sceneFadeCanvas.FadeOut(
                             () =>
                             {

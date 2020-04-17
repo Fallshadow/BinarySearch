@@ -122,7 +122,7 @@ namespace act.ui
         {
             if (onCloseCompleteHandler == null)
             {
-                //debug.PrintSystem.LogWarning($"[UserInterfaceBase] UI has already closed. Name: {gameObject.name}");
+                debug.PrintSystem.LogWarning($"[UserInterfaceBase] UI has already closed. Name: {gameObject.name}");
                 completeCb?.Invoke();
                 return;
             }

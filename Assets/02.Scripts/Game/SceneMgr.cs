@@ -20,6 +20,7 @@ namespace act.game
 
         public void LoadSceneAsync(SceneEnum index, Action completeCB = null)
         {
+            ClearSceneNotNeed();
             StartCoroutine(_loadSceneAsync(index, completeCB));
         }
 
@@ -39,6 +40,11 @@ namespace act.game
                 process = operation.progress;
                 yield return new WaitForSeconds(refreshTime);
             }
+        }
+
+        private void ClearSceneNotNeed()
+        {
+            ui.UiManager.instance.CloseAllUi();
         }
     }
 }

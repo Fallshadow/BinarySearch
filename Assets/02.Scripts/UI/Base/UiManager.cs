@@ -89,6 +89,17 @@ namespace act.ui
             }
         }
 
+        public void CloseAllUi()
+        {
+            foreach (var item in loadedUiDict)
+            {
+                if(!(item.Value is SceneFadeCanvas))
+                {
+                    item.Value.Close();
+                }
+            }
+        }
+
         public void OpenUi<T>(Action completeCb = null) where T : UiBase
         {
             loadedUiDict.TryGetValue(typeof(T), out UiBase ui);

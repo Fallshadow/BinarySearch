@@ -8,6 +8,7 @@ namespace act.ui
     public enum FadeType
     {
         FullBlackFade = 0,
+        Berserk = 1,
     }
     [BindingResource("SceneFadeCanvas")]
     public class SceneFadeCanvas : UiBase

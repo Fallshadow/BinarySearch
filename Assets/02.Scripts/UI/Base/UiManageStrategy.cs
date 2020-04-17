@@ -37,7 +37,7 @@ namespace act.ui
         {
             fullScreenRoot = roots[0];
             popUpWindowRoot = roots[1];
-            frontMask = popUpWindowRoot.GetComponentInChildren<UiFullScreenMask>();
+            frontMask = popUpWindowRoot.GetComponentInChildren<UiFullScreenMask>(true);
         }
 
         public void Clear()

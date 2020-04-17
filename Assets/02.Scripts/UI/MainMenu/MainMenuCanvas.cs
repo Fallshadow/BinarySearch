@@ -24,7 +24,12 @@ namespace act.ui
         {
             game.SceneMgr.instance.NextScene = game.SceneEnum.Study;
             game.GameController.instance.FSM.SwitchToState((int)fsm.GameFsmState.ASYNCLOADING);
-            Close();
+        }
+
+        public void TurnToPlayTownScene()
+        {
+            game.SceneMgr.instance.NextScene = game.SceneEnum.Study;
+            game.GameController.instance.FSM.SwitchToState((int)fsm.GameFsmState.ASYNCLOADING);
         }
 
     }

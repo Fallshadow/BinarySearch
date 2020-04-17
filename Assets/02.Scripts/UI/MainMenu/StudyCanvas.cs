@@ -33,5 +33,11 @@ namespace act.ui
             Cursor.SetCursor(ui.UiManager.instance.GetTexture(data.ResourcesPathSetting.MouseTextures, mouseName) as Texture2D,Vector2.zero,CursorMode.Auto);
         }
 
+        public void ExitToMain()
+        {
+            game.SceneMgr.instance.NextScene = game.SceneEnum.MainMenu;
+            game.GameController.instance.FSM.SwitchToState((int)fsm.GameFsmState.ASYNCLOADING);
+        }
+
     }
 }
